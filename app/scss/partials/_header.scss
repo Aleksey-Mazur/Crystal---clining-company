@@ -1,0 +1,38 @@
+.header {
+  background-color: #efefee;
+
+  &__container {
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.875rem 0;
+  }
+
+  &__login {
+  }
+}
+.menu {
+  &__body {
+    display: flex;
+    gap: clamp(1.6rem, 1.052rem + 2.74vw, 3.5rem);
+  }
+
+  &__item {
+  }
+
+  &__link {
+    color: $bodyColor;
+  }
+}
+.login {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  &__link {
+    color: $bodyColor;
+  }
+}
