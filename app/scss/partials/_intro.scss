@@ -1,0 +1,17 @@
+// ========== Menu intro ==========
+.intro {
+  background-color: #00728f;
+  padding: 1rem 0;
+}
+
+.menu-intro {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+
+  &__link {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+}

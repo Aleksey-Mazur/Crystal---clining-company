@@ -3,9 +3,11 @@ body {
   height: 100%;
   font-family: 'Roboto', sans-serif;
   color: $bodyColor;
+  font-size: 1rem;
 }
 
 a {
+  transition: all 0.3s;
   @media (any-hover: hover) {
     &:hover {
       text-decoration: underline;
@@ -30,4 +32,46 @@ a {
   max-width: 1430px;
   margin: 0 auto;
   padding: 0 1rem;
+}
+
+.logo {
+  height: 4.125rem;
+  width: 10.75rem;
+  position: relative;
+
+  &__text {
+    font-family: $fontFamily2;
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: #00728f;
+    top: 12%;
+    left: 23%;
+  }
+}
+
+.btn-submit {
+  font-weight: 700;
+  border: none;
+  background-color: #ffcc34;
+  cursor: pointer;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  transition: background-color 0.3s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: $secondaryYellow;
+    }
+  }
+}
+
+.main-heading {
+  font-family: $fontFamily2;
+  font-weight: 800;
+  font-size: clamp(2rem, 1.712rem + 1.44vw, 3rem);
+  line-height: 1.35;
+  color: #000;
 }

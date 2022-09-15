@@ -1,8 +1,6 @@
+// ========== Navigation ==========
 .header {
   background-color: #efefee;
-
-  &__container {
-  }
 
   &__navigation {
     display: flex;
@@ -10,23 +8,19 @@
     align-items: center;
     padding: 0.875rem 0;
   }
-
-  &__login {
-  }
 }
+
 .menu {
   &__body {
     display: flex;
     gap: clamp(1.6rem, 1.052rem + 2.74vw, 3.5rem);
   }
 
-  &__item {
-  }
-
   &__link {
     color: $bodyColor;
   }
 }
+
 .login {
   display: flex;
   align-items: center;
@@ -34,5 +28,58 @@
 
   &__link {
     color: $bodyColor;
+  }
+}
+
+// ========== Contacts ==========
+.info-header {
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 2.688rem;
+    padding: 1.25rem 0 1rem;
+  }
+}
+
+.logo {
+  &__descr {
+    font-family: $fontFamily2;
+    display: block;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.2;
+    max-width: 7.25rem;
+  }
+}
+
+.contact {
+  display: flex;
+  gap: 2.63rem;
+  text-align: center;
+  padding-top: 0.5rem;
+
+  &__tel-link {
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.2;
+    color: #000;
+  }
+
+  &__text {
+    display: block;
+    font-size: 0.875rem;
+  }
+
+  &__call-request {
+    font-size: 0.875rem;
+    width: 14.2rem;
+    height: 2.63rem;
+    margin-left: 1.38rem;
   }
 }
