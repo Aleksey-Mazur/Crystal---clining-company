@@ -1,0 +1,105 @@
+.facts {
+  &__top {
+    background-color: #fff;
+    padding: clamp(4rem, 3.5rem + 2.5vw, 6.5rem)
+      clamp(6rem, 5.58rem + 2.1vw, 8.1rem) 0;
+  }
+
+  &__heading {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item-wrap {
+    display: flex;
+    background-size: contain;
+    flex: 0 0 43%;
+    padding: 12.5rem 0 9.4rem;
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  &__label {
+    width: 12.4rem;
+    height: 11.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #ffcc34;
+    border-radius: 0.8rem;
+    box-shadow: 5px 7px 15px rgba(0, 0, 0, 0.2);
+    font-weight: 900;
+    font-size: 6rem;
+  }
+
+  &__text {
+    max-width: 14.5rem;
+    font-weight: 900;
+    font-size: 1.5rem;
+    line-height: 1.16;
+
+    & > span {
+      display: block;
+      font-size: 2.25rem;
+    }
+  }
+}
+
+.wrap-year {
+  background: url(../../images/icons/12.svg) no-repeat;
+  justify-content: flex-end;
+}
+
+.wrap-percent {
+  background: url(../../images/icons/98.svg) no-repeat;
+  justify-content: flex-start;
+}
+
+.year-label {
+  font-size: 4rem;
+  margin-top: -3rem;
+}
+
+.percent-label {
+  font-size: 3rem;
+  margin-top: 2rem;
+}
+
+.facts-bottom {
+  background-color: #016c88;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    text-align: center;
+    line-height: 1.16;
+    padding: 3.2rem 1rem;
+  }
+
+  &__number {
+    font-weight: 900;
+    font-size: 4.375rem;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.35);
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 1.5rem;
+
+    & > span {
+      display: block;
+    }
+  }
+}

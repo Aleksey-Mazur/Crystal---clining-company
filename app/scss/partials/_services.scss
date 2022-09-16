@@ -1,0 +1,32 @@
+.services {
+  background-color: #efefee;
+  padding: clamp(5.5rem, 4.538rem + 4.81vw, 10.31rem)
+    clamp(6rem, 4.925rem + 5.38vw, 11.375rem)
+    clamp(3.5rem, 2.875rem + 3.13vw, 6.625rem);
+
+  &__heading {
+    font-family: $fontFamily2;
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 1.35;
+    color: #000;
+    letter-spacing: -1px;
+    margin: 1.3rem 0 1rem;
+  }
+
+  &__item {
+    font-family: $fontFamily;
+    font-size: 1.125rem;
+    line-height: 1.16;
+    margin-bottom: 0.53rem;
+  }
+}
+
+.services-container {
+  display: flex;
+  gap: 2rem;
+  background-color: #fff;
+  padding: 4.5rem 5.1rem 3.35rem;
+  border-radius: 0.8rem;
+  box-shadow: 5px 5px 40px -1px rgba(0, 0, 0, 0.1);
+}
