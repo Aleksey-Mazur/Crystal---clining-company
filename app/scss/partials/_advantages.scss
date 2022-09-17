@@ -1,0 +1,42 @@
+.advantages {
+  background-color: $bgGray;
+  padding: clamp(8rem, 7.6rem + 2vw, 10rem)
+    clamp(14rem, 11.48rem + 12.6vw, 26.6rem);
+  text-align: center;
+
+  &__heading {
+    text-transform: uppercase;
+    margin-bottom: 3.75rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 14.75rem;
+    height: 17.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 0.8rem;
+    box-shadow: 5px 5px 40px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  &__image {
+  }
+
+  &__text {
+    font-family: $fontFamily2;
+    font-weight: 800;
+    font-size: 1.125rem;
+    line-height: 1.4;
+    text-transform: uppercase;
+    max-width: 60%;
+    margin-top: 1.44rem;
+    text-align: center;
+  }
+}

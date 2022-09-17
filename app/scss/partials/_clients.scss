@@ -1,0 +1,135 @@
+.clients {
+  margin: clamp(4rem, 3.05rem + 4.75vw, 8.75rem) 0;
+
+  &__container {
+    position: relative;
+  }
+
+  &__wrapper {
+    height: 21rem;
+  }
+
+  &__heading {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: clamp(2.6rem, 2.37rem + 1.15vw, 3.75rem);
+  }
+
+  &__slider {
+    overflow: hidden;
+  }
+}
+
+.swiper-wrapper {
+  display: inline-flex;
+}
+
+.clients-slide {
+  height: 7.62rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  & > img {
+    width: 10rem;
+    height: 5rem;
+  }
+}
+
+.slider-buttons {
+  width: 100%;
+  position: absolute;
+  top: 48%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.clients-slider-btn {
+  width: 1.75rem;
+  height: 3.125rem;
+  background: url(../../images/icons/slider-arrow.svg) center center no-repeat;
+  cursor: pointer;
+}
+
+.clients-slider-prev {
+  position: absolute;
+  left: 0;
+}
+
+.clients-slider-next {
+  position: absolute;
+  right: 0;
+  transform: rotate(180deg);
+}
+
+//========== Pagination ==========
+.swiper-pagination {
+  position: absolute;
+  text-align: center;
+  transition: 300ms opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+}
+
+/* Common Styles */
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Bullets */
+.swiper-pagination-bullet {
+  width: 0.9rem;
+  height: 0.9rem;
+  display: inline-block;
+  border-radius: 50%;
+  background: #000;
+  opacity: 0.2;
+}
+button.swiper-pagination-bullet {
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: pointer;
+}
+.swiper-pagination-bullet:only-child {
+  display: none !important;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #6b6b6b;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 0.75rem;
+}
+.swiper-horizontal
+  > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.swiper-horizontal
+  > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic
+  .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic
+  .swiper-pagination-bullet {
+  transition: 200ms transform, 200ms left;
+}
+.swiper-horizontal.swiper-rtl
+  > .swiper-pagination-bullets-dynamic
+  .swiper-pagination-bullet {
+  transition: 200ms transform, 200ms right;
+}
