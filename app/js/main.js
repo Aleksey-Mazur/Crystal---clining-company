@@ -55,3 +55,34 @@ const worksSlider = new Swiper('.works-slider', {
     eventsTarget: '.works-slider',
   },
 });
+
+// Testimonials slider
+const testimonialsSlider = new Swiper('.testimonials-slider', {
+  slidesPerView: 3,
+  slidesPerGroup: 3,
+  loop: true,
+  speed: 900,
+  spaceBetween: 36,
+
+  // autoplay: {
+  //   delay: 5000,
+  // },
+
+  navigation: {
+    nextEl: '.testimonials-slider-next',
+    prevEl: '.testimonials-slider-prev',
+  },
+
+  pagination: {
+    el: '.testimonials-pagination',
+    clickable: true,
+    bulletClass: 'testimonials-swiper-pagination-bullet',
+    bulletActiveClass: 'testimonials-swiper-pagination-bullet-active',
+    clickableClass: 'testimonials-swiper-pagination-clickable',
+  },
+
+  mousewheel: {
+    sensitivity: 1,
+    eventsTarget: '.testimonials-slider',
+  },
+});
