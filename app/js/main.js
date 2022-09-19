@@ -49,11 +49,6 @@ const worksSlider = new Swiper('.works-slider', {
     bulletActiveClass: 'works-swiper-pagination-bullet-active',
     clickableClass: 'works-swiper-pagination-clickable',
   },
-
-  mousewheel: {
-    sensitivity: 1,
-    eventsTarget: '.works-slider',
-  },
 });
 
 // Testimonials slider
@@ -64,9 +59,9 @@ const testimonialsSlider = new Swiper('.testimonials-slider', {
   speed: 900,
   spaceBetween: 36,
 
-  // autoplay: {
-  //   delay: 5000,
-  // },
+  autoplay: {
+    delay: 8000,
+  },
 
   navigation: {
     nextEl: '.testimonials-slider-next',
