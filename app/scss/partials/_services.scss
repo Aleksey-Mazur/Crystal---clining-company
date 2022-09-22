@@ -5,6 +5,7 @@
     clamp(3.5rem, 2.875rem + 3.13vw, 6.625rem);
 
   &__heading {
+    display: inline-block;
     font-family: $fontFamily2;
     font-weight: 700;
     font-size: 1.75rem;
@@ -12,10 +13,20 @@
     color: #000;
     letter-spacing: -1px;
     margin: 1.3rem 0 1rem;
+    transition: color 0.4s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: none;
+        color: #00728f;
+      }
+    }
   }
 
-  &__item {
+  &__link {
+    display: inline-block;
     font-family: $fontFamily;
+    color: $bodyColor;
     font-size: 1.125rem;
     line-height: 1.16;
     margin-bottom: 0.53rem;
