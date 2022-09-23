@@ -81,3 +81,49 @@ const testimonialsSlider = new Swiper('.testimonials-slider', {
     eventsTarget: '.testimonials-slider',
   },
 });
+
+// Menu-burger
+const body = document.body;
+const menu = document.querySelector('.menu__body');
+const menuBtn = document.querySelector('.menu__icon');
+const menuExpand = document.querySelector('.menu-header');
+const overlay = document.querySelector('.overlay');
+const menuLinks = document.querySelectorAll('.menu__link');
+const menuExpandLinks = document.querySelectorAll('.menu-header__link');
+const login = document.querySelector('.login__link');
+
+const burgerController = function () {
+  menu.classList.toggle('active');
+  menuBtn.classList.toggle('active');
+  menuExpand.classList.toggle('hidden');
+  body.classList.toggle('lock');
+};
+
+const closeBurger = function () {
+  menu.classList.remove('active');
+  menuBtn.classList.remove('active');
+  menuExpand.classList.add('hidden');
+  body.classList.remove('lock');
+  overlay.classList.add('overlay-hidden');
+};
+
+if (menu && menuBtn && overlay) {
+  menuBtn.addEventListener('click', () => {
+    burgerController();
+    overlay.classList.toggle('overlay-hidden');
+  });
+
+  overlay.addEventListener('click', () => {
+    closeBurger();
+  });
+
+  menuLinks.forEach(link => {
+    link.addEventListener('click', closeBurger);
+  });
+
+  menuExpandLinks.forEach(link => {
+    link.addEventListener('click', closeBurger);
+  });
+
+  login.addEventListener('click', closeBurger);
+}

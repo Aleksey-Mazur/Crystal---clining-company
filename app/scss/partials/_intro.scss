@@ -1,7 +1,11 @@
 // ========== Menu intro ==========
 .intro {
-  background-color: #00728f;
+  background-color: $blue;
   padding: 1rem 0;
+
+  @media (max-width: 992px) {
+    display: none;
+  }
 }
 
 .menu-intro {

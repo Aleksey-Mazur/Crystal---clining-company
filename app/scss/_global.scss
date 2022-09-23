@@ -4,6 +4,10 @@ body {
   font-family: $fontFamily;
   color: $bodyColor;
   font-size: 1rem;
+
+  &.lock {
+    overflow: hidden;
+  }
 }
 
 a {
@@ -74,4 +78,21 @@ a {
   font-size: clamp(2rem, 1.712rem + 1.44vw, 3rem);
   line-height: 1.35;
   color: #000;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 10;
+  transition: all 0.5s;
+}
+
+.overlay-hidden {
+  visibility: hidden;
+  opacity: 0;
 }

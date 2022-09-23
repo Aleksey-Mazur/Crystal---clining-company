@@ -15,9 +15,9 @@
   <body>
     <!-- ========== Header ========== -->
     <header class="header">
-      <div class="header__container">
-        <nav class="header__navigation">
-          <ul class="menu__body">
+      <div class="header__container header__menu menu">
+        <nav class="header__navigation menu__body">
+          <ul class="menu__list">
             <li class="menu__item">
               <a href="#" class="menu__link">Про компанію</a>
             </li>
@@ -41,6 +41,23 @@
               <a href="#" class="login__link">Особистий кабінет</a>
             </div>
           </div>
+          <ul class="menu-header hidden">
+            <li class="menu-header__item">
+              <a href="#" class="menu-header__link">Офіси та приміщення</a>
+            </li>
+            <li class="menu-header__item">
+              <a href="#" class="menu-header__link">Квартира та дім</a>
+            </li>
+            <li class="menu-header__item">
+              <a href="#" class="menu-header__link">Миття вікон</a>
+            </li>
+            <li class="menu-header__item">
+              <a href="#" class="menu-header__link">Хімчистка</a>
+            </li>
+            <li class="menu-header__item">
+              <a href="#" class="menu-header__link">Додаткові послуги</a>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
@@ -53,6 +70,11 @@
               <span class="logo__text">Crystal</span>
             </a>
             <span class="logo__descr">Клінінгова компанія</span>
+          </div>
+          <div class="menu__icon">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
           <div class="info-header__contacts contact">
             <div class="contact__tel-private">
@@ -67,9 +89,10 @@
               >
               <span class="contact__text">Для організацій</span>
             </div>
-            <button class="contact__call-request btn-submit">
-              Замовити дзвінок
+            <button class="contact__button contact__button-call btn-submit">
+              Зателефонувати
             </button>
+            <button class="contact__button btn-submit">Замовити дзвінок</button>
           </div>
         </div>
       </div>
@@ -1075,6 +1098,7 @@
         </div>
       </footer>
     </div>
+    <div class="overlay overlay-hidden"></div>
 
     <script src="js/main.min.js"></script>
   </body>
