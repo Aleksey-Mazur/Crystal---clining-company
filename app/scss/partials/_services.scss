@@ -1,8 +1,12 @@
 .services {
   background-color: $bgGray;
-  padding: clamp(5.5rem, 4.538rem + 4.81vw, 10.31rem)
-    clamp(6rem, 4.925rem + 5.38vw, 11.375rem)
-    clamp(3.5rem, 2.875rem + 3.13vw, 6.625rem);
+  padding: clamp(2.8rem, -0.419rem + 8.94vw, 10.31rem)
+    clamp(3rem, -0.589rem + 9.97vw, 11.375rem)
+    clamp(1.6rem, -0.554rem + 5.98vw, 6.625rem);
+
+  @media (max-width: 576px) {
+    padding: 1.6rem 1rem;
+  }
 
   &__heading {
     display: inline-block;
@@ -36,8 +40,28 @@
 .services-container {
   display: flex;
   gap: 2rem;
+  justify-content: space-between;
   background-color: #fff;
   padding: 4.5rem 5.1rem 3.35rem;
   border-radius: 0.8rem;
   box-shadow: 5px 5px 40px -1px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 1400px) {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  @media (max-width: 1200px) {
+    padding: 2.5rem 3.1rem 2.35rem;
+  }
+
+  @media (max-width: 576px) {
+    padding: 2rem 1rem;
+  }
+}
+
+.services__items {
+  @media (max-width: 1400px) {
+    width: 20.3125rem;
+  }
 }

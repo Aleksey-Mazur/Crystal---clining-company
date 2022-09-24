@@ -139,15 +139,17 @@ const openModal = function (e) {
   overlay.classList.remove('overlay-hidden');
 };
 
-const closeModal = function (e) {
-  e.preventDefault();
+const closeModal = function () {
   modal.classList.add('banner__form-modal-hidden');
   overlay.classList.add('overlay-hidden');
 };
 
 btnOpenModal.addEventListener('click', openModal);
 
-btnCloseModal.addEventListener('click', closeModal);
+btnCloseModal.addEventListener('click', e => {
+  e.preventDefault();
+  closeModal();
+});
 
 if (
   !menu.classList.contains('active') &&
