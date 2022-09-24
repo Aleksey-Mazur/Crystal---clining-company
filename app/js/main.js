@@ -127,3 +127,36 @@ if (menu && menuBtn && overlay) {
 
   login.addEventListener('click', closeBurger);
 }
+
+// Modal window
+const btnOpenModal = document.querySelector('.banner__call-request-btn');
+const btnCloseModal = document.querySelector('.clean-order__btn-close-modal');
+const modal = document.querySelector('.banner__form-modal');
+
+const openModal = function (e) {
+  e.preventDefault();
+  modal.classList.remove('banner__form-modal-hidden');
+  overlay.classList.remove('overlay-hidden');
+};
+
+const closeModal = function (e) {
+  e.preventDefault();
+  modal.classList.add('banner__form-modal-hidden');
+  overlay.classList.add('overlay-hidden');
+};
+
+btnOpenModal.addEventListener('click', openModal);
+
+btnCloseModal.addEventListener('click', closeModal);
+
+if (
+  !menu.classList.contains('active') &&
+  !menuBtn.classList.contains('active') &&
+  menuExpand.classList.contains('hidden')
+)
+  overlay.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && !modal.classList.contains('.overlay-hidden'))
+    closeModal();
+});

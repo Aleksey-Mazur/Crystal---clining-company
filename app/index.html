@@ -132,8 +132,11 @@
               <span class="banner__text-add"
                 >Професійне прибирання офісів та квартир</span
               >
+              <button class="btn-submit banner__call-request-btn">
+                Залишити заявку
+              </button>
             </div>
-            <form action="№" class="banner__form">
+            <form action="#" class="banner__form banner__form-main">
               <h3 class="form-heading">Замовити прибирання</h3>
               <div class="clean-order">
                 <input
@@ -160,6 +163,38 @@
                   value="Залишити заявку"
                 />
               </div>
+            </form>
+            <form
+              action="#"
+              class="banner__form banner__form-modal banner__form-modal-hidden"
+            >
+              <h3 class="form-heading">Замовити прибирання</h3>
+              <div class="clean-order">
+                <input
+                  type="text"
+                  class="clean-order__input"
+                  name="name"
+                  id="name-modal"
+                  placeholder="Ім'я"
+                />
+              </div>
+              <div class="clean-order">
+                <input
+                  type="number"
+                  class="clean-order__input"
+                  name="number"
+                  id="number-modal"
+                  placeholder="Телефон"
+                />
+              </div>
+              <div class="clean-order">
+                <input
+                  class="btn-submit clean-order__btn"
+                  type="submit"
+                  value="Залишити заявку"
+                />
+              </div>
+              <button class="clean-order__btn-close-modal">&times;</button>
             </form>
           </div>
         </section>
