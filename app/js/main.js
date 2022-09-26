@@ -162,3 +162,42 @@ document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape' && !modal.classList.contains('.overlay-hidden'))
     closeModal();
 });
+
+// Running numbers
+const revealNumbers = document.querySelectorAll('.facts-bottom__item');
+const target1 = document.getElementById('out-1').innerHTML;
+const targetNum1 = +target1.split('.').join('');
+const target2 = document.getElementById('out-2').innerHTML;
+const targetNum2 = +target2.split('.').join('');
+const target3 = document.getElementById('out-3').innerHTML;
+const targetNum3 = +target3.split('.').join('');
+
+const outNum = function (num, el, time, step) {
+  const number = document.getElementById(el);
+  let n = 0;
+  const t = Math.round(time / (num / step));
+
+  const interval = setInterval(() => {
+    n = n + step;
+    if (n >= num) {
+      clearInterval(interval);
+      number.innerHTML = num.toLocaleString('ua').replaceAll(',', '.');
+    } else number.innerHTML = n.toLocaleString('ua').replaceAll(',', '.');
+  }, t);
+};
+
+const runNumbers = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  outNum(targetNum1, 'out-1', 2000, 1000);
+  outNum(targetNum2, 'out-2', 2000, 100000);
+  outNum(targetNum3, 'out-3', 2000, 1000);
+  observer.unobserve(entry.target);
+};
+
+const numObserver = new IntersectionObserver(runNumbers, {
+  root: null,
+  threshold: 0.5,
+});
+
+revealNumbers.forEach(numbers => numObserver.observe(numbers));
