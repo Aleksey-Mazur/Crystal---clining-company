@@ -1,5 +1,5 @@
 .clients {
-  margin: clamp(4rem, 3.05rem + 4.75vw, 8.75rem) 0;
+  margin: clamp(2rem, 0.65rem + 6.75vw, 8.75rem) 0;
 
   &__container {
     position: relative;
@@ -7,12 +7,28 @@
 
   &__wrapper {
     height: 21rem;
+
+    @media (max-width: 1500px) {
+      width: 90%;
+    }
+
+    @media (max-width: 1500px) {
+      height: 16rem;
+    }
+
+    @media (max-width: 460px) {
+      height: 15rem;
+    }
   }
 
   &__heading {
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: clamp(2.6rem, 2.37rem + 1.15vw, 3.75rem);
+    margin-bottom: clamp(1rem, 0.45rem + 2.75vw, 3.75rem);
+
+    @media (max-width: 460px) {
+      font-size: 1.8rem;
+    }
   }
 
   &__slider {
@@ -39,9 +55,30 @@
 .slider-buttons {
   width: 100%;
   position: absolute;
-  top: 48%;
+  top: 46%;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 1500px) {
+    top: 54%;
+  }
+
+  @media (max-width: 1200px) {
+    top: 50%;
+  }
+
+  @media (max-width: 960px) {
+    top: 46%;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  @media (max-width: 460px) {
+    display: block;
+    top: 56%;
+  }
 }
 
 .clients-slider-btn {
@@ -49,17 +86,33 @@
   height: 3.125rem;
   background: url(../../images/icons/slider-arrow.svg) center center no-repeat;
   cursor: pointer;
+
+  @media (max-width: 992px) {
+    height: 2.5rem;
+  }
 }
 
 .clients-slider-prev {
   position: absolute;
   left: 0;
+
+  @media (max-width: 1200px) {
+    left: -2rem;
+  }
+
+  @media (max-width: 460px) {
+    left: -1rem;
+  }
 }
 
 .clients-slider-next {
   position: absolute;
   right: 0;
   transform: rotate(180deg);
+
+  @media (max-width: 1200px) {
+    right: 1rem;
+  }
 }
 
 //========== Pagination ==========
@@ -69,6 +122,10 @@
   transition: 300ms opacity;
   transform: translate3d(0, 0, 0);
   z-index: 10;
+
+  @media (max-width: 460px) {
+    display: none;
+  }
 }
 
 /* Common Styles */

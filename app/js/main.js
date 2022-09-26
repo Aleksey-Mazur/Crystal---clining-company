@@ -1,9 +1,9 @@
 // Clients slider
 const clientsSlider = new Swiper('.clients-slider', {
-  slidesPerView: 4,
-  slidesPerGroup: 4,
+  slidesPerView: 1,
+  slidesPerGroup: 1,
   loop: true,
-  speed: 1200,
+  speed: 1600,
 
   autoplay: {
     delay: 5000,
@@ -22,6 +22,21 @@ const clientsSlider = new Swiper('.clients-slider', {
   mousewheel: {
     sensitivity: 1,
     eventsTarget: '.clients-slider',
+  },
+
+  breakpoints: {
+    992: {
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+    },
+    600: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+    460: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
   },
 });
 
