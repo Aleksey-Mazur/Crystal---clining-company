@@ -1,8 +1,12 @@
 .testimonials {
   background-color: $bgGray;
-  padding: clamp(4rem, 3.2rem + 4vw, 8rem)
-    clamp(3rem, 2.25rem + 3.75vw, 6.75rem)
-    clamp(3rem, 2.25rem + 3.75vw, 6.75rem);
+  padding: clamp(4rem, 2.74rem + 4.38vw, 8rem)
+    clamp(3rem, 1.818rem + 4.11vw, 6.75rem)
+    clamp(3rem, 1.818rem + 4.11vw, 6.75rem);
+
+  @media (max-width: 460px) {
+    padding: 1.6rem 1rem 1rem;
+  }
 
   &__wrapper {
     position: relative;
@@ -11,6 +15,14 @@
   &__heading {
     text-align: center;
     text-transform: uppercase;
+
+    @media (max-width: 768px) {
+      max-width: 66%;
+    }
+
+    @media (max-width: 460px) {
+      max-width: 100%;
+    }
   }
 
   &__slider {
@@ -18,6 +30,10 @@
     max-width: 96rem;
     margin: 0 auto;
     padding: 5.2rem 1rem;
+
+    @media (max-width: 768px) {
+      padding: 1rem 1rem 3rem;
+    }
   }
 }
 
@@ -27,11 +43,10 @@
 
 .testimonial {
   width: 30.5rem;
-  height: 21.57rem;
   background: #fff;
   box-shadow: 0px 6px 30px rgba(0, 72, 90, 0.4);
   border-radius: 1.875rem;
-  padding: 2.5rem 6rem 1rem 3rem;
+  padding: 2.5rem 3rem;
   position: relative;
 
   &__name {
@@ -41,6 +56,10 @@
     color: #000;
     display: flex;
     align-items: center;
+
+    @media (max-width: 460px) {
+      font-size: clamp(1.3rem, 0.557rem + 3.71vw, 1.625rem);
+    }
   }
 
   &__rating {
@@ -75,6 +94,10 @@
     font-family: $fontFamily2;
     color: #fff;
     font-weight: 700;
+
+    @media (max-width: 460px) {
+      font-size: clamp(0.8rem, 0.343rem + 2.29vw, 1rem);
+    }
   }
 
   &__text {
@@ -95,29 +118,46 @@
 
 //========== Buttons ==========
 .testimonials__slider-buttons {
-  width: 100%;
+  width: 9rem;
   position: absolute;
-  top: 50%;
+  bottom: 0;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    top: 7%;
+    right: 0;
+  }
+
+  @media (max-width: 460px) {
+    width: 100%;
+    top: 50%;
+  }
 }
 
 .testimonials-slider-btn {
-  width: 2rem;
+  width: 3.7rem;
   height: 3.7rem;
+  border: 2px solid #2f869d;
+  border-radius: 50%;
   background: url(../../images/icons/slider-arrow-blue.svg) center center
     no-repeat;
   cursor: pointer;
+
+  @media (max-width: 460px) {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+  }
 }
 
 .testimonials-slider-prev {
-  position: absolute;
-  left: -3rem;
+  left: -5%;
 }
 
 .testimonials-slider-next {
-  position: absolute;
-  right: 8rem;
+  right: -5%;
   transform: rotate(180deg);
 }
 

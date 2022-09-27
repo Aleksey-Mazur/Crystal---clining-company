@@ -9,13 +9,31 @@
   &__heading {
     padding: clamp(3rem, 1.947rem + 5.27vw, 5.6rem) 0;
     text-transform: uppercase;
+
+    @media (max-width: 460px) {
+      font-size: 1.8rem;
+    }
   }
 
   &__items {
     display: flex;
+    column-gap: 2rem;
     row-gap: clamp(4.5rem, 3.69rem + 4.05vw, 6.5rem);
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @media (max-width: 1200px) {
+      justify-content: space-evenly;
+    }
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media (max-width: 460px) {
+      padding: 0 1rem;
+    }
   }
 
   &__item {
@@ -35,12 +53,20 @@
     line-height: 1.16;
     color: #000;
     margin-bottom: 1rem;
+
+    @media (max-width: 460px) {
+      font-size: 1.3rem;
+    }
   }
 
   &_text {
     font-size: 1.125rem;
     line-height: 1.16;
     color: #000;
+
+    @media (max-width: 460px) {
+      font-size: 1rem;
+    }
   }
 
   &__foot-text {
@@ -50,5 +76,9 @@
     font-weight: 700;
     font-size: 2.25rem;
     color: #000;
+
+    @media (max-width: 460px) {
+      font-size: 1.5rem;
+    }
   }
 }

@@ -42,8 +42,8 @@ const clientsSlider = new Swiper('.clients-slider', {
 
 // Works example slider
 const worksSlider = new Swiper('.works-slider', {
-  slidesPerView: 3,
-  slidesPerGroup: 3,
+  slidesPerView: 1,
+  slidesPerGroup: 1,
   loop: true,
   speed: 900,
   spaceBetween: 30,
@@ -64,12 +64,23 @@ const worksSlider = new Swiper('.works-slider', {
     bulletActiveClass: 'works-swiper-pagination-bullet-active',
     clickableClass: 'works-swiper-pagination-clickable',
   },
+
+  breakpoints: {
+    1100: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+  },
 });
 
 // Testimonials slider
 const testimonialsSlider = new Swiper('.testimonials-slider', {
-  slidesPerView: 3,
-  slidesPerGroup: 3,
+  slidesPerView: 1,
+  slidesPerGroup: 1,
   loop: true,
   speed: 900,
   spaceBetween: 36,
@@ -94,6 +105,17 @@ const testimonialsSlider = new Swiper('.testimonials-slider', {
   mousewheel: {
     sensitivity: 1,
     eventsTarget: '.testimonials-slider',
+  },
+
+  breakpoints: {
+    1400: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
   },
 });
 
