@@ -2,7 +2,6 @@
 .banner {
   background: url(../../images/photos/banner-bg.png) no-repeat;
   background-size: cover;
-  position: relative;
 
   &__container {
     display: flex;
@@ -154,63 +153,5 @@
     cursor: pointer;
     border: none;
     background: none;
-  }
-}
-
-// ========== Bullets ==========
-.bullet {
-  width: clamp(36rem, 9.313rem + 66.72vw, 89.375rem);
-  background-color: #fff;
-  display: flex;
-  justify-content: space-evenly;
-  gap: clamp(2rem, 0.867rem + 2.36vw, 3.7rem);
-  position: absolute;
-  bottom: 12%;
-  left: 0;
-  right: 0;
-  z-index: 3;
-
-  @media (max-width: 768px) {
-    width: 88%;
-    position: static;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 1rem;
-  }
-
-  &__item {
-    display: flex;
-    align-items: center;
-    gap: clamp(0.8rem, 0.167rem + 1.32vw, 1.75rem);
-    max-width: 16rem;
-    padding: 1.6rem 0;
-    font-size: clamp(0.8rem, 0.667rem + 0.28vw, 1rem);
-
-    @media (max-width: 768px) {
-      max-width: 100%;
-      width: 64%;
-      font-size: clamp(1rem, 0.857rem + 0.71vw, 1.2rem);
-      gap: clamp(1.5rem, 0.607rem + 4.46vw, 2.75rem);
-      padding: 1rem 0;
-      justify-content: space-between;
-    }
-
-    @media (max-width: 640px) {
-      width: 80%;
-    }
-
-    @media (max-width: 460px) {
-      width: 90%;
-    }
-  }
-
-  &__img {
-    @media (max-width: 1200px) {
-      height: clamp(3.2rem, 2.267rem + 1.94vw, 4.6rem);
-    }
-
-    @media (max-width: 768px) {
-      height: auto;
-    }
   }
 }

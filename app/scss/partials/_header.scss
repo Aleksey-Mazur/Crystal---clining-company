@@ -45,7 +45,7 @@
       width: 30px;
       height: 18px;
       position: relative;
-      z-index: 15;
+      z-index: 18;
       cursor: pointer;
 
       & > span {
@@ -93,7 +93,7 @@
       height: 100vh;
       width: 50%;
       background-color: #fff;
-      z-index: 12;
+      z-index: 18;
       flex-direction: column;
       justify-content: center;
       overflow: auto;

@@ -3,16 +3,39 @@
   display: flex;
   justify-content: flex-end;
 
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
+
   &__wrapper {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: center;
-    gap: clamp(6rem, 3.333rem + 5.56vw, 10rem);
+    gap: clamp(1rem, -17.871rem + 23.23vw, 10rem);
+
+    @media (max-width: 1200px) {
+      padding: 3rem 1rem;
+    }
+
+    @media (max-width: 640px) {
+      flex-direction: column;
+      gap: 3rem;
+    }
   }
 
   &__form-wrapper {
     width: 23%;
+
+    @media (max-width: 1500px) {
+      width: 36%;
+      margin-left: 2%;
+    }
+
+    @media (max-width: 640px) {
+      margin: 0;
+      width: 80%;
+    }
   }
 
   &__form {
@@ -36,6 +59,33 @@
     box-shadow: 0px 4px 20px #004c63;
     border-radius: 0.5rem;
     margin-right: 2%;
+
+    @media (max-width: 1400px) {
+      width: 48%;
+    }
+
+    @media (max-width: 1200px) {
+      width: 40%;
+    }
+
+    @media (max-width: 768px) {
+      width: 50%;
+    }
+
+    @media (max-width: 640px) {
+      margin: 0;
+      width: 70%;
+    }
+
+    @media (max-width: 640px) {
+      width: 80%;
+    }
+  }
+
+  &__photo {
+    @media (min-width: 700px) and (max-width: 1200px) {
+      display: none;
+    }
   }
 }
 
@@ -63,11 +113,12 @@
 
   &__btn {
     width: 100%;
+    height: 3rem;
     font-family: $fontFamily2;
     font-weight: 700;
     font-size: 0.875rem;
     color: #000;
-    padding: 0.75rem 0;
+    // padding: 0.75rem 0;
   }
 }
 
@@ -77,6 +128,19 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  align-items: center;
+
+  @media (max-width: 1300px) {
+    width: 100%;
+  }
+
+  &__item {
+    width: 100%;
+
+    @media (max-width: 1300px) {
+      width: 80%;
+    }
+  }
 
   &__link {
     display: block;
@@ -107,6 +171,26 @@
       top: 50%;
       transform: translateY(-50%);
       left: 27%;
+
+      @media (max-width: 1300px) {
+        left: 16%;
+      }
+
+      @media (max-width: 1200px) {
+        left: 30%;
+      }
+
+      @media (max-width: 900px) {
+        left: 24%;
+      }
+
+      @media (max-width: 400px) {
+        left: 18%;
+      }
+    }
+
+    @media (max-width: 1400px) {
+      padding: 0.5rem 0.1rem 0.5rem 10%;
     }
 
     &-instagram::before {
