@@ -118,7 +118,6 @@
     font-weight: 700;
     font-size: 0.875rem;
     color: #000;
-    // padding: 0.75rem 0;
   }
 }
 
@@ -194,30 +193,30 @@
     }
 
     &-instagram::before {
-      background: url(../../images/icons/instagram-icon.svg) no-repeat;
+      background: url(../images/icons/instagram-icon.svg) no-repeat;
     }
 
     &-telegram::before {
-      background: url(../../images/icons/telegram-icon.svg) no-repeat;
+      background: url(../images/icons/telegram-icon.svg) no-repeat;
     }
 
     &-phone {
       padding-left: 6%;
 
       &::before {
-        background: url(../../images/icons/phone-icon.svg) no-repeat;
+        background: url(../images/icons/phone-icon.svg) no-repeat;
       }
     }
 
     &-facebook::before {
-      background: url(../../images/icons/facebook-icon.svg) no-repeat;
+      background: url(../images/icons/facebook-icon.svg) no-repeat;
     }
 
     &-viber {
       padding-left: 0;
 
       &::before {
-        background: url(../../images/icons/viber-icon.svg) no-repeat;
+        background: url(../images/icons/viber-icon.svg) no-repeat;
       }
     }
   }

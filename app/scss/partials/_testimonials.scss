@@ -78,7 +78,7 @@
       content: '';
       width: 13px;
       height: 13px;
-      background: url(../../images/icons/star.svg) no-repeat;
+      background: url(../images/icons/star.svg) no-repeat;
       position: absolute;
       top: 6px;
       right: 13px;
@@ -140,8 +140,7 @@
   height: 3.7rem;
   border: 2px solid #2f869d;
   border-radius: 50%;
-  background: url(../../images/icons/slider-arrow-blue.svg) center center
-    no-repeat;
+  background: url(../images/icons/slider-arrow-blue.svg) center center no-repeat;
   cursor: pointer;
 
   @media (max-width: 460px) {

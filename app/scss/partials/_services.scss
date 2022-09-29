@@ -4,8 +4,6 @@
     clamp(1.6rem, -1.75rem + 6.98vw, 6.625rem);
   position: relative;
 
-  // clamp(2.8rem, -0.419rem + 8.94vw, 10.31rem)
-
   @media (max-width: 1200px) {
     padding-top: 6rem;
   }
