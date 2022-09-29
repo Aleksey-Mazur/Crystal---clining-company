@@ -23,6 +23,7 @@ a {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  overflow-x: hidden;
 }
 
 .main {
@@ -96,4 +97,13 @@ a {
 .overlay-hidden {
   visibility: hidden;
   opacity: 0;
+}
+
+.section-reveal {
+  transition: transform 1s, opacity 1s;
+}
+
+.section-hidden {
+  opacity: 0;
+  transform: translateY(8rem);
 }
